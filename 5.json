@@ -1,0 +1,34 @@
+{
+    "visualization_settings": {
+          "graph.dimensions": [
+                       "anoconclusao",
+            "disciplina"     
+          ],
+          "graph.metrics": [
+            "avg"
+          ],
+          "graph.show_values": false
+        },
+        "description": "Descrição -  Média das notas de cada Disciplina por anoConclusão - area - tcc",
+        "collection_position": null,
+        "result_metadata": null,
+        "metadata_checksum": null,
+        "collection_id": 3,
+        "name": " Média das notas de cada Disciplina por anoConclusão -  area - tcc",
+        "dataset_query": {
+            "database": 5,
+            "type": "native",
+            "native": {
+                "query" : "SELECT public.turma.disciplina AS disciplina, public.turma.anoconclusao AS anoconclusao, avg(public.turma.nota) AS avg
+    FROM public.turma
+    WHERE public.turma.deleted = FALSE
+    GROUP BY public.turma.disciplina, public.turma.anoconclusao
+    ORDER BY public.turma.disciplina ASC, public.turma.anoconclusao ASC"
+            }
+        },
+          "display": "area"
+    }
+    
+    
+    
+       
