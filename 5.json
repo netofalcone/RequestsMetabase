@@ -20,8 +20,7 @@
             "type": "native",
             "native": {
                 "query" : "SELECT public.turma.disciplina AS disciplina, public.turma.anoconclusao AS anoconclusao, avg(public.turma.nota) AS avg
-    FROM public.turma
-    WHERE public.turma.deleted = FALSE
+    FROM public.turma  WHERE public.turma.deleted = FALSE
     GROUP BY public.turma.disciplina, public.turma.anoconclusao
     ORDER BY public.turma.disciplina ASC, public.turma.anoconclusao ASC"
             }
