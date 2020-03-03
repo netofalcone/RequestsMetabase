@@ -1,24 +1,24 @@
 {
-  "visualization_settings": {
-    "graph.show_values": true,
-    "pie.dimension": "disciplina",
-    "pie.metric": "count"
-  },
-	"description": "Descrição - Contagem numérica de todos alunos por disciplina - barra - tcc",
-	"collection_position": null,
-	"result_metadata": null,
-	"metadata_checksum": null,
-	"collection_id": 3,
-	"name": "Contagem numérica de todos alunos por disciplina - barra - tcc",
-	"dataset_query": {
-		"database": 5,
-		"type": "native",
-		"native": {
-			"query" : "SELECT public.turma.disciplina AS disciplina, count(*) AS count
-FROM public.turma
-GROUP BY public.turma.disciplina
-ORDER BY public.turma.disciplina ASC "
-		}
+	"visualization_settings": {
+	  "graph.show_values": true,
+	  "pie.dimension": "disciplina",
+	  "pie.metric": "count"
 	},
-	  "display": "bar"
-}
+	  "description": "Descrição - Contagem numérica de todos alunos por disciplina - barra - tcc",
+	  "collection_position": null,
+	  "result_metadata": null,
+	  "metadata_checksum": null,
+	  "collection_id": 3,
+	  "name": "Contagem numérica de todos alunos por disciplina - barra - tcc",
+	  "dataset_query": {
+		  "database": 5,
+		  "type": "native",
+		  "native": {
+			  "query" : "SELECT public.turma.disciplina AS disciplina, count(*) AS count
+  FROM public.turma
+  GROUP BY public.turma.disciplina
+  ORDER BY public.turma.disciplina ASC "
+		  }
+	  },
+		"display": "bar"
+  }
