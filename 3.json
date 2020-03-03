@@ -1,0 +1,32 @@
+{
+  "visualization_settings": {
+   "graph.dimensions": [
+     "anoconclusao"
+   ],
+   "graph.metrics": [
+     "avg"
+   ],
+   "graph.show_values": false
+ },
+   "description": "Descrição - Média geral das notas por anoConclusão - tcc",
+   "collection_position": null,
+   "result_metadata": null,
+   "metadata_checksum": null,
+   "collection_id": null,
+   "name": "Média geral das notas por anoConclusão - tcc
+",
+   "dataset_query": {
+       "database": 5,
+       "type": "native",
+       "native": {
+           "query" : " SELECT public.turma.anoconclusao AS anoconclusao, avg(public.turma.nota) AS avg
+FROM public.turma
+WHERE public.turma.deleted = FALSE
+GROUP BY public.turma.anoconclusao
+ORDER BY public.turma.anoconclusao ASC "
+       }
+   },
+     "display": "line"
+}
+
+ 
