@@ -1,0 +1,25 @@
+{
+  "visualization_settings": {
+    "graph.show_values": true,
+    "pie.dimension": "{{property}}",
+    "pie.metric": "count"
+  },
+    "description": "Descrição - Contagem numérica e percentual de {{entity}} por {{property}} - Gráfico de Pizza",
+    "collection_position": null,
+    "result_metadata": null,
+    "metadata_checksum": null,
+    "collection_id": null,
+    "name": "Contagem numérica e percentual de {{entity}} por {{property}} - Gráfico de Pizza",
+    "dataset_query": {
+        "database": 5,
+        "type": "native",
+        "native": {
+            "query" : "SELECT public.{{entity}}.{{property}} AS {{property}}, count(*) AS count
+FROM public.{{entity}}
+WHERE public.turma.deleted = FALSE //Pode remover o WHERE do template pois nao se aplica a todas as tabelas
+GROUP BY public.{{entity}}.{{property}}
+ORDER BY public.{{entity}}.{{property}} ASC "
+        }
+    },
+      "display": "pie"
+}

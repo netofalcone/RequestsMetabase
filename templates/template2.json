@@ -1,0 +1,24 @@
+{
+  "visualization_settings": {
+    "graph.show_values": true,
+    "pie.dimension": "{{property}}",
+    "pie.metric": "count"
+  },
+	"description": "Descrição - Contagem numérica de todos {{property}} por {{property}} - barra - tcc",
+	"collection_position": null,
+	"result_metadata": null,
+	"metadata_checksum": null,
+	"collection_id": 3,
+	"name": "Contagem numérica de todos {{property}} por {{property}} - Gráfico de Barra - tcc",
+	"dataset_query": {
+		"database": 5,
+		"type": "native",
+		"native": {
+			"query" : "SELECT public.{{entity}}.{{property}} AS {{property}}, count(*) AS count
+FROM public.{{entity}}
+GROUP BY public.{{entity}}.{{property}}
+ORDER BY public.{{entity}}.{{property}} ASC "
+		}
+	},
+	  "display": "bar"
+}
